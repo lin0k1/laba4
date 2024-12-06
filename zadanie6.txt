@@ -1,0 +1,1 @@
+Get-Process | Select-Object Name,Company, @{N='StartDate';E={$_.StartTime.ToShortDateString()}} | Sort-Object size | ConvertTo-Html | tee 6.html
